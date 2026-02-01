@@ -379,7 +379,6 @@ with col_graf4:
             'JEY': 'Jersey'
         }
 
-        salario_medio_cd_paises = df_filtrado[df_filtrado['cargo'] == 'Cientista de Dados'].groupby('residencia_iso3')['usd'].mean().reset_index()
         salario_medio_cd_paises['residencia_nome'] = salario_medio_cd_paises['residencia_iso3'].map(nomes_paises)
         salario_medio_cd_paises['residencia_nome'] = salario_medio_cd_paises['residencia_nome'].fillna(salario_medio_cd_paises['residencia_iso3'])
 
