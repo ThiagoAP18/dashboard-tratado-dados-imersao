@@ -1,13 +1,6 @@
 import pandas as pd
 import plotly.express as px
-import pycountry as pc
 import streamlit as st
-
-def iso2_to_iso3(code):
-    try:
-        return pc.countries.get(alpha_2=code).alpha_3
-    except:
-        return None
 
 #Configuração da Página
 st.set_page_config(
