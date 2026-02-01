@@ -1,0 +1,1 @@
+Esse é um repositório que contém uma Dashboard de Análise de Dados na área de profissionais de Ciência de Dados desenvolvido em Python, utilizando as biliotecas Streamlit, Pandas, Pyplotly e Pycountry durante a Imersão de Dados com Python da plataforma de ensino online Alura em 2026
