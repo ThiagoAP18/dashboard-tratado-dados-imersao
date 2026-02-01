@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 #Carregamento de Planilha
-df = pd.read_csv("df-imersao-dados.csv")
+df = pd.read_csv("..\df-imersao-dados.csv")
 
 #Barra Lateral
 st.sidebar.header("🔍 Filtros")
