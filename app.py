@@ -272,8 +272,6 @@ col_graf5 = st.columns(1)
 
 with col_graf4:
     if not df_filtrado.empty:
-        df_filtrado['residencia_iso3'] = df_filtrado['residencia'].apply(iso2_to_iso3)
-
         nomes_paises = {
             'USA': 'Estados Unidos',
             'AUS': 'Austrália',
@@ -379,6 +377,7 @@ with col_graf4:
             'JEY': 'Jersey'
         }
 
+        salario_medio_cd_paises = df_filtrado[df_filtrado['cargo'] == 'Cientista de Dados'].groupby('residencia_iso3')['usd'].mean().reset_index()
         salario_medio_cd_paises['residencia_nome'] = salario_medio_cd_paises['residencia_iso3'].map(nomes_paises)
         salario_medio_cd_paises['residencia_nome'] = salario_medio_cd_paises['residencia_nome'].fillna(salario_medio_cd_paises['residencia_iso3'])
 
